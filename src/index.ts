@@ -3,3 +3,9 @@
 /// <reference path="../src/wow.ts" />
 /// <reference path="../src/exceptions.ts" />
 /// <reference path="../src/httpRequest.ts" />
+
+import {API} from './api'
+import * as Wow from './wow'
+import * as Diablo3 from './diablo3'
+import {ApiException} from './exceptions'
+import {HttpRequest} from './httpRequest'
