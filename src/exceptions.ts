@@ -1,8 +1,14 @@
 namespace BlizzardTypo
 {
+    /**
+     * Exception for promise rejection at http request
+     */
     export interface ApiException
     {
-        code: number,
-        message: string
+        code?: number,
+        type?: string,
+        message?: string
     }
 }
+
+export = BlizzardTypo

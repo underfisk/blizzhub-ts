@@ -22,10 +22,10 @@ var BlizzardTypo;
                  */
                 this.seasonIndexes = (region) => {
                     return new Promise((resolve, reject) => {
-                        request.get(`https://${region}.api.blizzard.com/data/d3/season/?access_token=${this.token}`)
+                        request.get(`https://${region}.api.blizzard.com/data/d3/season/?access_token=${this.token.identifier}`)
                             .then(JSON.parse)
-                            .then(Promise.resolve)
-                            .catch(Promise.reject);
+                            .then(resolve)
+                            .catch(reject);
                     });
                 };
                 this.token = bearerToken;
