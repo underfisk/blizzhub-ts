@@ -5,7 +5,7 @@
 /// <reference path="../src/httpRequest.ts" />
 
 import a = require('../src/api')
-module Blizzhub
+export module Blizzhub
 {
     export class API extends a.API {}
 
