@@ -1,20 +1,27 @@
 {
-  "name": "blizzardtypo",
+  "name": "blizzhub",
   "version": "1.0.0",
-  "description": "",
+  "description": "A typescript library implemention of blizzard API",
+  "keywords": "blizzard, battle.net, API, diablo3, wow",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/underfisk/blizzhub-ts"
+  },
   "main": "src/index.ts",
   "dependencies": {
     "@types/node": "^10.12.2",
     "@types/request": "^2.48.1",
     "@types/request-promise": "^4.1.42",
     "request": "^2.88.0",
-    "request-promise": "^4.2.2"
+    "request-promise": "^4.2.2",
+    "typescript": "next"
   },
   "devDependencies": {},
   "scripts": {
-    "compile": "tsc && node build/index.js",
+    "prepare" : "npm run build",
+    "compile": "tsc && node lib/index.js",
     "dev": "nodemon -e ts  --exec \"npm run compile\""
   },
   "author": "Enigma",
-  "license": "ISC"
+  "license": "MIT"
 }

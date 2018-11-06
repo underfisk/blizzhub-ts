@@ -1548,7 +1548,125 @@ namespace Wow
          */
         getBattlegrounds = (region: string, locale: string): Promise<JSON | ApiException> => {
             return HttpRequest.get(`https://${region}.api.blizzard.com/wow/data/battlegroups/?
-                locale=${locale}S&access_token=${this.token.identifier}`)
+                locale=${locale}&access_token=${this.token.identifier}`)
+        }
+
+        
+        /**
+         * Returns a list of races and their associated faction, name, unique ID, and skin.
+         * 
+         * @param string region
+         * @param string locale
+         * 
+         * @return Promise
+         */
+        getCharacterRaces = (region: string, locale: string): Promise<JSON | ApiException> => {
+            return HttpRequest.get(`https://${region}.api.blizzard.com/wow/data/character/races?
+                locale=${locale}&access_token=${this.token.identifier}`)
+        }
+
+        /**
+         * Returns a list of character classes.
+         * 
+         * @param string region
+         * @param string locale
+         * 
+         * @return Promise
+         */
+        getCharacterClasses = (region: string, locale: string): Promise<JSON | ApiException> => {
+            return HttpRequest.get(`https://${region}.api.blizzard.com/wow/data/character/classes?
+                locale=${locale}&access_token=${this.token.identifier}`)
+        }
+
+        /**
+         * Returns a list of all achievements that characters can earn as well as the category structure and hierarchy.
+         * 
+         * @param string region
+         * @param string locale
+         * 
+         * @return Promise
+         */
+        getCharacterAchivements = (region: string, locale: string): Promise<JSON | ApiException> => {
+            return HttpRequest.get(`https://${region}.api.blizzard.com/wow/data/character/achievements?
+                locale=${locale}&access_token=${this.token.identifier}`)
+        }
+
+        /**
+         * The guild rewards data API provides a list of all guild rewards.
+         * 
+         * @param string region
+         * @param string locale
+         * 
+         * @return Promise
+         */
+        getGuildRewards = (region: string, locale: string): Promise<JSON | ApiException> => {
+            return HttpRequest.get(`https://${region}.api.blizzard.com/wow/data/guild/rewards?
+                locale=${locale}&access_token=${this.token.identifier}`)
+        }
+
+        /**
+         * Returns a list of all guild perks.
+         * 
+         * @param string region
+         * @param string locale
+         * 
+         * @return Promise
+         */
+        getGuildPerks = (region: string, locale: string): Promise<JSON | ApiException> => {
+            return HttpRequest.get(`https://${region}.api.blizzard.com/wow/data/guild/perks?
+                locale=${locale}&access_token=${this.token.identifier}`)
+        }
+
+        /**
+         * Returns a list of all guild achievements as well as the category structure and hierarchy.
+         * 
+         * @param string region
+         * @param string locale
+         * 
+         * @return Promise
+         */
+        getGuildAchivements = (region: string, locale: string): Promise<JSON | ApiException> => {
+            return HttpRequest.get(`https://${region}.api.blizzard.com/wow/data/guild/achievements?
+                locale=${locale}&access_token=${this.token.identifier}`)
+        }
+
+        /**
+         * Returns a list of item classes.
+         * 
+         * @param string region
+         * @param string locale
+         * 
+         * @return Promise
+         */
+        getItemClasses = (region: string, locale: string): Promise<JSON | ApiException> => {
+            return HttpRequest.get(`https://${region}.api.blizzard.com/wow/data/item/classes?
+                locale=${locale}&access_token=${this.token.identifier}`)
+        }
+
+        /**
+         * Returns a list of talents, specs, and glyphs for each class.
+         * 
+         * @param string region
+         * @param string locale
+         * 
+         * @return Promise
+         */
+        getTalents = (region: string, locale: string): Promise<JSON | ApiException> => {
+            return HttpRequest.get(`https://${region}.api.blizzard.com/wow/data/talents?
+                locale=${locale}&access_token=${this.token.identifier}`)
+        }
+
+        /**
+         * Returns a list of the different battle pet types, including what they are strong and weak against.
+         * 
+         * @param string region
+         * @param string locale
+         * 
+         * @return Promise
+         */
+        getPetTypes = (region: string, locale: string): Promise<JSON | ApiException> => {
+            return HttpRequest.get(`https://${region}.api.blizzard.com/wow/data/pet/types?
+                locale=${locale}&access_token=${this.token.identifier}`)
         }
     }
 }
