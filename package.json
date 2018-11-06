@@ -20,7 +20,7 @@
   "devDependencies": {},
   "scripts": {
     "build": "tsc",
-    "prepare": "npm run build",
+    "deploy": "npm run build && npm version patch && npm publish",
     "compile": "tsc && node lib/index.js",
     "dev": "nodemon -e ts  --exec \"npm run compile\""
   },
