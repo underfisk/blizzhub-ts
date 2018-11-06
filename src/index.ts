@@ -7,5 +7,11 @@
 import {API} from './api'
 import * as Wow from './wow'
 import * as Diablo3 from './diablo3'
-import {ApiException} from './exceptions'
 import {HttpRequest} from './httpRequest'
+
+export = {
+    API,
+    Wow,
+    Diablo3,
+    HttpRequest
+}
