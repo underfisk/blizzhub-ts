@@ -4,14 +4,9 @@
 /// <reference path="../src/exceptions.ts" />
 /// <reference path="../src/httpRequest.ts" />
 
-import {API} from './api'
-import * as Wow from './wow'
-import * as Diablo3 from './diablo3'
-import {HttpRequest} from './httpRequest'
+import a = require('../src/api')
+module Blizzhub
+{
+    export class API extends a.API {}
 
-export = {
-    API,
-    Wow,
-    Diablo3,
-    HttpRequest
 }
