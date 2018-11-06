@@ -1,6 +1,6 @@
 {
   "name": "blizzhub",
-  "version": "1.0.0",
+  "version": "1.0.1",
   "description": "A typescript library implemention of blizzard API",
   "keywords": "blizzard, battle.net, API, diablo3, wow",
   "repository": {
@@ -20,7 +20,7 @@
   "devDependencies": {},
   "scripts": {
     "build": "tsc",
-    "prepare" : "npm run build",
+    "prepare": "npm run build",
     "compile": "tsc && node lib/index.js",
     "dev": "nodemon -e ts  --exec \"npm run compile\""
   },
