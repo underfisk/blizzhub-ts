@@ -11,9 +11,9 @@ to retrieve the client_id and client_secret (this is basically how OAuth works).
 To initialize our api we simply do:
 
 ```ts
-import { API, IBearerToken } from 'blizzhub/api'
-import wow from 'blizzhub/wow'
-import d3 from 'blizzhub/diablo3'
+import { API, IBearerToken } from 'blizzhub/lib/api'
+import * as wow from 'blizzhub/lib/wow'
+import * as db from 'blizzhub/lib/diablo3'
 const api = new API('client_id', 'client_secret', (status, token) => {
     //Here inside you do whatever you want with the token like this
     const const conRealms = new wow.ConnectedRealm();
@@ -25,7 +25,7 @@ const api = new API('client_id', 'client_secret', (status, token) => {
 Now there are alot of options for Wow or Diablo3, you can even import them directly by doing
 
 ```ts
-import {Boss} from 'blizzhub/wow'
+import {Boss} from 'blizzhub/lib/wow'
 ```
 
 This library is up-to-date with battle.net dev portal, i'll keep updating this
