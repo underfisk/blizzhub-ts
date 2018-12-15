@@ -1,8 +1,10 @@
 {
   "name": "blizzhub",
-  "version": "1.0.13",
+  "version": "1.0.14",
   "description": "A typescript library implemention of blizzard API",
-  "keywords": ["blizzard,battle.net,API,diablo3,wow"],
+  "keywords": [
+    "blizzard,battle.net,API,diablo3,wow"
+  ],
   "repository": {
     "type": "git",
     "url": "https://github.com/underfisk/blizzhub-ts"
