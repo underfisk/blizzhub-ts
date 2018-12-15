@@ -1,6 +1,6 @@
 {
   "name": "blizzhub",
-  "version": "1.0.12",
+  "version": "1.0.13",
   "description": "A typescript library implemention of blizzard API",
   "keywords": "blizzard, battle.net, API, diablo3, wow",
   "repository": {
