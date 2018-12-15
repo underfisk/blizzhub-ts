@@ -1,6 +1,5 @@
-/// <reference path="../src/api.ts" />
-/// <reference path="../src/diablo3.ts" />
-/// <reference path="../src/wow.ts" />
-/// <reference path="../src/exceptions.ts" />
-/// <reference path="../src/httpRequest.ts" />
-
+export * from './api'
+export * from './diablo3'
+export * from './httpRequest'
+export * from './wow'
+export * from './exceptions'

@@ -6,7 +6,7 @@ import { ApiException } from "./exceptions";
  * Diablo III API Reference 
  * @link https://develop.battle.net/documentation/api-reference/
  */
-namespace Diablo3
+export namespace Diablo3
 {
     /**
      * Profile requests of bnet account data
@@ -76,8 +76,7 @@ namespace Diablo3
          * @return Promise
          */
         getApiDetailedHeroItems = (region: string, bnet: string, heroId: string, locale: string): Promise<JSON | ApiException> => {
-            return HttpRequest.get(`https://${region}.api.blizzard.com/d3/profile/${bnet}/hero/${heroId}/
-            items?locale=${locale}&access_token=${this.token.identifier}`)
+            return HttpRequest.get(`https://${region}.api.blizzard.com/d3/profile/${bnet}/hero/${heroId}/items?locale=${locale}&access_token=${this.token.identifier}`)
         }
         
         /**
@@ -91,8 +90,7 @@ namespace Diablo3
          * @return Promise
          */
         getApiDetailedFollowerItems = (region: string, bnet: string, heroId: string, locale: string): Promise<JSON | ApiException> => {
-            return HttpRequest.get(`https://${region}.api.blizzard.com/d3/profile/${bnet}/hero/${heroId}/
-            follower-items?locale=${locale}&access_token=${this.token.identifier}`)
+            return HttpRequest.get(`https://${region}.api.blizzard.com/d3/profile/${bnet}/hero/${heroId}/follower-items?locale=${locale}&access_token=${this.token.identifier}`)
         }
 
     }
@@ -269,8 +267,7 @@ namespace Diablo3
          * @return Promise
          */
         getItem = (region: string, itemSlugAndId: string, locale: string): Promise<JSON | ApiException> => {
-            return HttpRequest.get(`https://${region}.api.blizzard.com/d3/data/item/${escape(itemSlugAndId)}
-                ?locale=${locale}&access_token=${this.token.identifier}`)
+            return HttpRequest.get(`https://${region}.api.blizzard.com/d3/data/item/${escape(itemSlugAndId)}?locale=${locale}&access_token=${this.token.identifier}`)
         }
 
         /**
@@ -282,8 +279,7 @@ namespace Diablo3
          * @return Promise
          */
         getItemTypeIndex = (region: string, locale: string): Promise<JSON | ApiException> => {
-            return HttpRequest.get(`https://${region}.api.blizzard.com/d3/data/item-type
-                ?locale=${locale}&access_token=USLGWLnbFGMQ5lS1LQ0A4wnGukM1I18MvI`)
+            return HttpRequest.get(`https://${region}.api.blizzard.com/d3/data/item-type?locale=${locale}&access_token=USLGWLnbFGMQ5lS1LQ0A4wnGukM1I18MvI`)
         }
 
         /**
@@ -296,8 +292,7 @@ namespace Diablo3
          * @return Promise
          */
         getItemType = (region: string, itemSlug: string, locale: string): Promise<JSON | ApiException> => {
-            return HttpRequest.get(`https://${region}.api.blizzard.com/d3/data/item-type/${escape(itemSlug)}
-                ?locale=${locale}&access_token=${this.token.identifier}`)
+            return HttpRequest.get(`https://${region}.api.blizzard.com/d3/data/item-type/${escape(itemSlug)}?locale=${locale}&access_token=${this.token.identifier}`)
         }
     }
 
@@ -340,8 +335,7 @@ namespace Diablo3
          * @return Promise
          */
         getFollower = (region: string, followerSlug: string, locale: string): Promise<JSON | ApiException> => {
-            return HttpRequest.get(`https://${region}.api.blizzard.com/d3/data/follower/${followerSlug}
-                ?locale=${locale}&access_token=${this.token.identifier}`)
+            return HttpRequest.get(`https://${region}.api.blizzard.com/d3/data/follower/${followerSlug}?locale=${locale}&access_token=${this.token.identifier}`)
         }
     }
 
@@ -396,8 +390,7 @@ namespace Diablo3
          * @return Promise
          */
         getAct = (region: string, actId: number, locale: string): Promise<JSON | ApiException> => {
-            return HttpRequest.get(`https://${region}.api.blizzard.com/d3/data/act/${actId}
-                ?locale=${locale}&access_token=${this.token.identifier}`)
+            return HttpRequest.get(`https://${region}.api.blizzard.com/d3/data/act/${actId}?locale=${locale}&access_token=${this.token.identifier}`)
         }
     }
 
@@ -440,8 +433,7 @@ namespace Diablo3
          * @return Promise
          */
         getArtisan = (region: string, artisanSlug: string, locale: string): Promise<JSON | ApiException> => {
-            return HttpRequest.get(`https://${region}.api.blizzard.com/d3/data/artisan/${artisanSlug}
-                ?locale=${locale}&access_token=${this.token.identifier}`)
+            return HttpRequest.get(`https://${region}.api.blizzard.com/d3/data/artisan/${artisanSlug}?locale=${locale}&access_token=${this.token.identifier}`)
         }
 
         /**
@@ -455,8 +447,7 @@ namespace Diablo3
          * @return Promise
          */
         getRecipe = (region: string, artisanSlug: string, recipeSlug: string, locale: string): Promise<JSON | ApiException> => {
-            return HttpRequest.get(`https://${region}.api.blizzard.com/d3/data/artisan/${artisanSlug}/recipe/${recipeSlug}
-                ?locale=${locale}&access_token=${this.token.identifier}`)
+            return HttpRequest.get(`https://${region}.api.blizzard.com/d3/data/artisan/${artisanSlug}/recipe/${recipeSlug}?locale=${locale}&access_token=${this.token.identifier}`)
         }
     }
 
@@ -499,8 +490,7 @@ namespace Diablo3
          * @return Promise
          */
         getCharacterClass = (region: string, classSlug: string, locale: string): Promise<JSON | ApiException> => {
-            return HttpRequest.get(`https://${region}.api.blizzard.com/d3/data/hero/${classSlug}
-                ?locale=${locale}&access_token=${this.token.identifier}`)   
+            return HttpRequest.get(`https://${region}.api.blizzard.com/d3/data/hero/${classSlug}?locale=${locale}&access_token=${this.token.identifier}`)   
         }
 
         /**
@@ -514,10 +504,7 @@ namespace Diablo3
          * @return Promise
          */
         getApiSkill = (region: string, classSlug: string, skillSlug: string, locale: string): Promise<JSON | ApiException> => {
-            return HttpRequest.get(`https://${region}.api.blizzard.com/d3/data/hero/${classSlug}/skill/${skillSlug}
-                ?locale=${locale}&access_token=${this.token.identifier}`)
+            return HttpRequest.get(`https://${region}.api.blizzard.com/d3/data/hero/${classSlug}/skill/${skillSlug}?locale=${locale}&access_token=${this.token.identifier}`)
         }
     }
 }
-
-export = Diablo3

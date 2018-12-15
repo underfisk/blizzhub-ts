@@ -6,7 +6,7 @@ import { ApiException } from "./exceptions";
  * Wow API Reference 
  * @link https://develop.battle.net/documentation/api-reference/
  */
-namespace Wow
+export namespace Wow
 {
     /**
      * ConnectedRealm requests all the connected realms
@@ -47,8 +47,7 @@ namespace Wow
          * @return Promise
          */
         getConnectedRealmIndex = (region: string, namespace: string, locale: string): Promise<JSON | ApiException> => {
-            return HttpRequest.get(`https://${region}.api.blizzard.com/data/wow/connected-realm/?namespace=${namespace}&
-                locale=${locale}&access_token=${this.token.identifier}`)
+            return HttpRequest.get(`https://${region}.api.blizzard.com/data/wow/connected-realm/?namespace=${namespace}&locale=${locale}&access_token=${this.token.identifier}`)
         }
 
         /**
@@ -62,8 +61,7 @@ namespace Wow
          * @return Promise
          */
         getConnectedRealm = (region: string, connRealmId: number, namespace: string, locale: string): Promise<JSON | ApiException> => {
-            return HttpRequest.get(`https://${region}.api.blizzard.com/data/wow/connected-realm/${connRealmId}?namespace=${namespace}&
-            locale=${locale}&access_token=${this.token.identifier}`)
+            return HttpRequest.get(`https://${region}.api.blizzard.com/data/wow/connected-realm/${connRealmId}?namespace=${namespace}&locale=${locale}&access_token=${this.token.identifier}`)
         }
 
 
@@ -109,8 +107,7 @@ namespace Wow
          * @return Promise
          */
         getMythicLeaderboardIndex = (region: string, connRealmId: number, namespace: string, locale: string): Promise<JSON | ApiException> => {
-            return HttpRequest.get(`https://${region}.api.blizzard.com/data/wow/connected-realm/${connRealmId}/mythic-leaderboard/?
-                namespace=${namespace}&locale=${locale}&access_token=${this.token.identifier}`)
+            return HttpRequest.get(`https://${region}.api.blizzard.com/data/wow/connected-realm/${connRealmId}/mythic-leaderboard/?namespace=${namespace}&locale=${locale}&access_token=${this.token.identifier}`)
         }
 
         /**
@@ -126,8 +123,7 @@ namespace Wow
          */
         getMythicLeaderboard = (region: string, connRealmId: number, dungeonId: number, period: number, 
                 namespace: string, locale: string): Promise<JSON | ApiException> => {
-            return HttpRequest.get(`https://${region}.api.blizzard.com/data/wow/connected-realm/${connRealmId}/mythic-leaderboard/${dungeonId}/period/${period}?
-                namespace=${namespace}&locale=${locale}&access_token=${this.token.identifier}`)
+            return HttpRequest.get(`https://${region}.api.blizzard.com/data/wow/connected-realm/${connRealmId}/mythic-leaderboard/${dungeonId}/period/${period}?namespace=${namespace}&locale=${locale}&access_token=${this.token.identifier}`)
         }
 
         /**
@@ -155,8 +151,7 @@ namespace Wow
          * @return Promise
          */
         getMythicChallengeModeIndex = (region: string, namespace: string, locale: string): Promise<JSON | ApiException> => {
-            return HttpRequest.get(`https://${region}.api.blizzard.com/data/wow/mythic-challenge-mode/?namespace=${namespace}&
-                locale=${locale}&access_token=${this.token.identifier}`)
+            return HttpRequest.get(`https://${region}.api.blizzard.com/data/wow/mythic-challenge-mode/?namespace=${namespace}&locale=${locale}&access_token=${this.token.identifier}`)
         }
     }
 
@@ -199,8 +194,7 @@ namespace Wow
          * @return Promise
          */
         getPlayableSpecializationIndex = (region: string, namespace: string, locale: string): Promise<JSON | ApiException> => {
-            return HttpRequest.get(`https://${region}.api.blizzard.com/data/wow/playable-specialization/?namespace=${namespace}
-                &locale=${locale}&access_token=${this.token.identifier}`)
+            return HttpRequest.get(`https://${region}.api.blizzard.com/data/wow/playable-specialization/?namespace=${namespace}&locale=${locale}&access_token=${this.token.identifier}`)
         }
         
         /**
@@ -214,8 +208,7 @@ namespace Wow
          * @return Promise
          */
         getPlayableSpecialization = (region: string, specId: number, namespace: string, locale: string): Promise<JSON | ApiException> => {
-            return HttpRequest.get(`https://${region}.api.blizzard.com/data/wow/playable-specialization/${specId}?namespace=${namespace}
-                &locale=${locale}&access_token=${this.token.identifier}`)
+            return HttpRequest.get(`https://${region}.api.blizzard.com/data/wow/playable-specialization/${specId}?namespace=${namespace}&locale=${locale}&access_token=${this.token.identifier}`)
         }
     }
 
@@ -258,8 +251,7 @@ namespace Wow
          * @return Promise
          */
         getRealmIndex = (region: string, namespace: string, locale: string): Promise<JSON | ApiException> => {
-            return HttpRequest.get(`https://${region}.api.blizzard.com/data/wow/realm/?namespace=${namespace}&
-                locale=${locale}&access_token=${this.token.identifier}`)
+            return HttpRequest.get(`https://${region}.api.blizzard.com/data/wow/realm/?namespace=${namespace}&locale=${locale}&access_token=${this.token.identifier}`)
         }
 
         /**
@@ -273,8 +265,7 @@ namespace Wow
          * @return Promise
          */
         getRealm = (region: string, realmSlug: string, namespace: string, locale: string): Promise<JSON | ApiException> => {
-            return HttpRequest.get(`https://${region}.api.blizzard.com/data/wow/realm/${realmSlug}?namespace=${namespace}&
-                locale=${locale}&access_token=${this.token.identifier}`)
+            return HttpRequest.get(`https://${region}.api.blizzard.com/data/wow/realm/${realmSlug}?namespace=${namespace}&locale=${locale}&access_token=${this.token.identifier}`)
         }
 
         /**
@@ -331,8 +322,7 @@ namespace Wow
          * @return Promise
          */
         getRegionIndex = (region: string, namespace: string, locale: string): Promise<JSON | ApiException> => {
-            return HttpRequest.get(`https://${region}.api.blizzard.com/data/wow/region/?namespace=${namespace}&
-                locale=${locale}&access_token=${this.token.identifier}`)
+            return HttpRequest.get(`https://${region}.api.blizzard.com/data/wow/region/?namespace=${namespace}&locale=${locale}&access_token=${this.token.identifier}`)
         }
 
         /**
@@ -346,8 +336,7 @@ namespace Wow
          * @return Promise
          */
         getRegion = (region: string, regionId: number, namespace: string, locale: string): Promise<JSON | ApiException> => {
-            return HttpRequest.get(`https://${region}.api.blizzard.com/data/wow/region/${regionId}?namespace=${namespace}&
-                locale=${locale}&access_token=${this.token.identifier}`)
+            return HttpRequest.get(`https://${region}.api.blizzard.com/data/wow/region/${regionId}?namespace=${namespace}&locale=${locale}&access_token=${this.token.identifier}`)
         }
     }
 
@@ -390,8 +379,7 @@ namespace Wow
          * @return Promise
          */
         getTokenIndex = (region: string, namespace: string, locale: string): Promise<JSON | ApiException> => {
-            return HttpRequest.get(`https://${region}.api.blizzard.com/data/wow/token/?namespace=${namespace}
-                &locale=${locale}&access_token=${this.token.identifier}`)
+            return HttpRequest.get(`https://${region}.api.blizzard.com/data/wow/token/?namespace=${namespace}&locale=${locale}&access_token=${this.token.identifier}`)
         }
     }
 
@@ -434,8 +422,7 @@ namespace Wow
          * @return Promise
          */
         getAchivement = (region: string, id: string, locale: string): Promise<JSON | ApiException> => {
-            return HttpRequest.get(`https://${region}.api.blizzard.com/wow/achievement/${id}?
-                locale=${locale}&access_token=${this.token.identifier}`)
+            return HttpRequest.get(`https://${region}.api.blizzard.com/wow/achievement/${id}?locale=${locale}&access_token=${this.token.identifier}`)
         }
     }
 
@@ -479,8 +466,7 @@ namespace Wow
          * @return Promise
          */
         getAuctionData = (region: string, realm: string, locale: string): Promise<JSON | ApiException> => {
-            return HttpRequest.get(`https://${region}.api.blizzard.com/wow/auction/data/${realm}?
-                locale=${locale}&access_token=${this.token.identifier}`)
+            return HttpRequest.get(`https://${region}.api.blizzard.com/wow/auction/data/${realm}?locale=${locale}&access_token=${this.token.identifier}`)
         }
     }
 
@@ -637,11 +623,9 @@ namespace Wow
          */
         getCharacterProfile = (region: string, realm: string, characterName: string, locale: string, fields?: string): Promise<JSON | ApiException> => {
             if (typeof fields == 'undefined' || fields == "")
-                return HttpRequest.get(`https://${region}.api.blizzard.com/wow/character/${realm}/${characterName}
-                    ?locale=${locale}&access_token=${this.token.identifier}`)
+                return HttpRequest.get(`https://${region}.api.blizzard.com/wow/character/${realm}/${characterName}?locale=${locale}&access_token=${this.token.identifier}`)
             else
-                return HttpRequest.get(`https://${region}.api.blizzard.com/wow/character/${realm}/${characterName}
-                    ?fields=${escape(fields)}&locale=${locale}&access_token=${this.token.identifier}`)
+                return HttpRequest.get(`https://${region}.api.blizzard.com/wow/character/${realm}/${characterName}?fields=${escape(fields)}&locale=${locale}&access_token=${this.token.identifier}`)
         }
 
         /**
@@ -655,8 +639,7 @@ namespace Wow
          * @return Promise
          */
         getAchivements = (region: string, realm: string, characterName: string, locale: string): Promise<JSON | ApiException> => {
-            return HttpRequest.get(`https://${region}.api.blizzard.com/wow/character/${realm}/${characterName}
-                ?fields=achivements&locale=${locale}&access_token=${this.token.identifier}`)
+            return HttpRequest.get(`https://${region}.api.blizzard.com/wow/character/${realm}/${characterName}?fields=achivements&locale=${locale}&access_token=${this.token.identifier}`)
         }
 
         /**
@@ -670,8 +653,7 @@ namespace Wow
          * @return Promise
          */
         getAppearance = (region: string, realm: string, characterName: string, locale: string): Promise<JSON | ApiException> => {
-            return HttpRequest.get(`https://${region}.api.blizzard.com/wow/character/${realm}/${characterName}
-                ?fields=appearance&locale=${locale}&access_token=${this.token.identifier}`)
+            return HttpRequest.get(`https://${region}.api.blizzard.com/wow/character/${realm}/${characterName}?fields=appearance&locale=${locale}&access_token=${this.token.identifier}`)
         }
 
         /**
@@ -685,8 +667,7 @@ namespace Wow
          * @return Promise
          */
         getFeed = (region: string, realm: string, characterName: string, locale: string): Promise<JSON | ApiException> => {
-            return HttpRequest.get(`https://${region}.api.blizzard.com/wow/character/${realm}/${characterName}
-                ?fields=feed&locale=${locale}&access_token=${this.token.identifier}`)
+            return HttpRequest.get(`https://${region}.api.blizzard.com/wow/character/${realm}/${characterName}?fields=feed&locale=${locale}&access_token=${this.token.identifier}`)
         }
 
         /**
@@ -703,8 +684,7 @@ namespace Wow
          * @return Promise
          */
         getGuild = (region: string, realm: string, characterName: string, locale: string): Promise<JSON | ApiException> => {
-            return HttpRequest.get(`https://${region}.api.blizzard.com/wow/character/${realm}/${characterName}
-                ?fields=guild&locale=${locale}&access_token=${this.token.identifier}`)
+            return HttpRequest.get(`https://${region}.api.blizzard.com/wow/character/${realm}/${characterName}?fields=guild&locale=${locale}&access_token=${this.token.identifier}`)
         }
 
         /**
@@ -718,8 +698,7 @@ namespace Wow
          * @return Promise
          */
         getHunterPets = (region: string, realm: string, characterName: string, locale: string): Promise<JSON | ApiException> => {
-            return HttpRequest.get(`https://${region}.api.blizzard.com/wow/character/${realm}/${characterName}
-                ?fields=hunterPets&locale=${locale}&access_token=${this.token.identifier}`)
+            return HttpRequest.get(`https://${region}.api.blizzard.com/wow/character/${realm}/${characterName}?fields=hunterPets&locale=${locale}&access_token=${this.token.identifier}`)
         }
 
         /**
@@ -734,8 +713,7 @@ namespace Wow
          * @return Promise
          */
         getItems = (region: string, realm: string, characterName: string, locale: string): Promise<JSON | ApiException> => {
-            return HttpRequest.get(`https://${region}.api.blizzard.com/wow/character/${realm}/${characterName}
-                ?fields=items&locale=${locale}&access_token=${this.token.identifier}`)
+            return HttpRequest.get(`https://${region}.api.blizzard.com/wow/character/${realm}/${characterName}?fields=items&locale=${locale}&access_token=${this.token.identifier}`)
         }
 
         /**
@@ -749,8 +727,7 @@ namespace Wow
          * @return Promise
          */
         getMounts = (region: string, realm: string, characterName: string, locale: string): Promise<JSON | ApiException> => {
-            return HttpRequest.get(`https://${region}.api.blizzard.com/wow/character/${realm}/${characterName}
-                ?fields=mounts&locale=${locale}&access_token=${this.token.identifier}`)
+            return HttpRequest.get(`https://${region}.api.blizzard.com/wow/character/${realm}/${characterName}?fields=mounts&locale=${locale}&access_token=${this.token.identifier}`)
         }
 
         /**
@@ -764,8 +741,7 @@ namespace Wow
          * @return Promise
          */
         getPets = (region: string, realm: string, characterName: string, locale: string): Promise<JSON | ApiException> => {
-            return HttpRequest.get(`https://${region}.api.blizzard.com/wow/character/${realm}/${characterName}
-                ?fields=pets&locale=${locale}&access_token=${this.token.identifier}`)
+            return HttpRequest.get(`https://${region}.api.blizzard.com/wow/character/${realm}/${characterName}?fields=pets&locale=${locale}&access_token=${this.token.identifier}`)
         }
 
         /**
@@ -783,8 +759,7 @@ namespace Wow
          * @return Promise
          */
         getPetSlots = (region: string, realm: string, characterName: string, locale: string): Promise<JSON | ApiException> => {
-            return HttpRequest.get(`https://${region}.api.blizzard.com/wow/character/${realm}/${characterName}
-                ?fields=petSlots&locale=${locale}&access_token=${this.token.identifier}`)
+            return HttpRequest.get(`https://${region}.api.blizzard.com/wow/character/${realm}/${characterName}?fields=petSlots&locale=${locale}&access_token=${this.token.identifier}`)
         }
 
         /**
@@ -798,8 +773,7 @@ namespace Wow
          * @return Promise
          */
         getProfessions = (region: string, realm: string, characterName: string, locale: string): Promise<JSON | ApiException> => {
-            return HttpRequest.get(`https://${region}.api.blizzard.com/wow/character/${realm}/${characterName}
-                ?fields=professions&locale=${locale}&access_token=${this.token.identifier}`)
+            return HttpRequest.get(`https://${region}.api.blizzard.com/wow/character/${realm}/${characterName}?fields=professions&locale=${locale}&access_token=${this.token.identifier}`)
         }
                 
         /**
@@ -813,8 +787,7 @@ namespace Wow
          * @return Promise
          */
         getProgression = (region: string, realm: string, characterName: string, locale: string): Promise<JSON | ApiException> => {
-            return HttpRequest.get(`https://${region}.api.blizzard.com/wow/character/${realm}/${characterName}
-                ?fields=progression&locale=${locale}&access_token=${this.token.identifier}`)
+            return HttpRequest.get(`https://${region}.api.blizzard.com/wow/character/${realm}/${characterName}?fields=progression&locale=${locale}&access_token=${this.token.identifier}`)
         }
 
         /**
@@ -828,8 +801,7 @@ namespace Wow
          * @return Promise
          */
         getPVP = (region: string, realm: string, characterName: string, locale: string): Promise<JSON | ApiException> => {
-            return HttpRequest.get(`https://${region}.api.blizzard.com/wow/character/${realm}/${characterName}
-                ?fields=pvp&locale=${locale}&access_token=${this.token.identifier}`)
+            return HttpRequest.get(`https://${region}.api.blizzard.com/wow/character/${realm}/${characterName}?fields=pvp&locale=${locale}&access_token=${this.token.identifier}`)
         }
 
         /**
@@ -843,8 +815,7 @@ namespace Wow
          * @return Promise
          */
         getQuests = (region: string, realm: string, characterName: string, locale: string): Promise<JSON | ApiException> => {
-            return HttpRequest.get(`https://${region}.api.blizzard.com/wow/character/${realm}/${characterName}
-                ?fields=quests&locale=${locale}&access_token=${this.token.identifier}`)
+            return HttpRequest.get(`https://${region}.api.blizzard.com/wow/character/${realm}/${characterName}?fields=quests&locale=${locale}&access_token=${this.token.identifier}`)
         }
 
         /**
@@ -858,8 +829,7 @@ namespace Wow
          * @return Promise
          */
         getReputations = (region: string, realm: string, characterName: string, locale: string): Promise<JSON | ApiException> => {
-            return HttpRequest.get(`https://${region}.api.blizzard.com/wow/character/${realm}/${characterName}
-                ?fields=reputation&locale=${locale}&access_token=${this.token.identifier}`)
+            return HttpRequest.get(`https://${region}.api.blizzard.com/wow/character/${realm}/${characterName}?fields=reputation&locale=${locale}&access_token=${this.token.identifier}`)
         }
 
         /**
@@ -873,8 +843,7 @@ namespace Wow
          * @return Promise
          */
         getStatistics = (region: string, realm: string, characterName: string, locale: string): Promise<JSON | ApiException> => {
-            return HttpRequest.get(`https://${region}.api.blizzard.com/wow/character/${realm}/${characterName}
-                ?fields=statistics&locale=${locale}&access_token=${this.token.identifier}`)
+            return HttpRequest.get(`https://${region}.api.blizzard.com/wow/character/${realm}/${characterName}?fields=statistics&locale=${locale}&access_token=${this.token.identifier}`)
         }
 
         /**
@@ -888,8 +857,7 @@ namespace Wow
          * @return Promise
          */
         getStats = (region: string, realm: string, characterName: string, locale: string): Promise<JSON | ApiException> => {
-            return HttpRequest.get(`https://${region}.api.blizzard.com/wow/character/${realm}/${characterName}
-                ?fields=stats&locale=${locale}&access_token=${this.token.identifier}`)
+            return HttpRequest.get(`https://${region}.api.blizzard.com/wow/character/${realm}/${characterName}?fields=stats&locale=${locale}&access_token=${this.token.identifier}`)
         }
 
         /**
@@ -903,8 +871,7 @@ namespace Wow
          * @return Promise
          */
         getTalents = (region: string, realm: string, characterName: string, locale: string): Promise<JSON | ApiException> => {
-            return HttpRequest.get(`https://${region}.api.blizzard.com/wow/character/${realm}/${characterName}
-                ?fields=talents&locale=${locale}&access_token=${this.token.identifier}`)
+            return HttpRequest.get(`https://${region}.api.blizzard.com/wow/character/${realm}/${characterName}?fields=talents&locale=${locale}&access_token=${this.token.identifier}`)
         }
 
         /**
@@ -918,8 +885,7 @@ namespace Wow
          * @return Promise
          */
         getTitles = (region: string, realm: string, characterName: string, locale: string): Promise<JSON | ApiException> => {
-            return HttpRequest.get(`https://${region}.api.blizzard.com/wow/character/${realm}/${characterName}
-                ?fields=titles&locale=${locale}&access_token=${this.token.identifier}`)
+            return HttpRequest.get(`https://${region}.api.blizzard.com/wow/character/${realm}/${characterName}?fields=titles&locale=${locale}&access_token=${this.token.identifier}`)
         }
 
         /**
@@ -933,8 +899,7 @@ namespace Wow
          * @return Promise
          */
         getAudit = (region: string, realm: string, characterName: string, locale: string): Promise<JSON | ApiException> => {
-            return HttpRequest.get(`https://${region}.api.blizzard.com/wow/character/${realm}/${characterName}
-                ?fields=audit&locale=${locale}&access_token=${this.token.identifier}`)
+            return HttpRequest.get(`https://${region}.api.blizzard.com/wow/character/${realm}/${characterName}?fields=audit&locale=${locale}&access_token=${this.token.identifier}`)
         }
     }
 
@@ -979,8 +944,7 @@ namespace Wow
         * @return Promise
         */
         getProfile = (region: string, realm: string, guildName: string, locale: string): Promise<JSON | ApiException> => {
-            return HttpRequest.get(`https://${region}.api.blizzard.com/wow/guild/${realm}/${guildName}?
-                fields=achievements%2Cchallenge&locale=${locale}&access_token=${this.token.identifier}`)
+            return HttpRequest.get(`https://${region}.api.blizzard.com/wow/guild/${realm}/${guildName}?fields=achievements%2Cchallenge&locale=${locale}&access_token=${this.token.identifier}`)
         }
 
         /**
@@ -995,8 +959,7 @@ namespace Wow
         * @return Promise
         */
         getMembers = (region: string, realm: string, guildName: string, locale: string): Promise<JSON | ApiException> => {
-            return HttpRequest.get(`https://${region}.api.blizzard.com/wow/guild/${realm}/${guildName}?
-                fields=members&locale=${locale}&access_token=${this.token.identifier}`)
+            return HttpRequest.get(`https://${region}.api.blizzard.com/wow/guild/${realm}/${guildName}?fields=members&locale=${locale}&access_token=${this.token.identifier}`)
         }
 
         /**
@@ -1011,8 +974,7 @@ namespace Wow
         * @return Promise
         */
         getAchivements = (region: string, realm: string, guildName: string, locale: string): Promise<JSON | ApiException> => {
-            return HttpRequest.get(`https://${region}.api.blizzard.com/wow/guild/${realm}/${guildName}?
-                fields=achievements&locale=${locale}&access_token=${this.token.identifier}`)
+            return HttpRequest.get(`https://${region}.api.blizzard.com/wow/guild/${realm}/${guildName}?fields=achievements&locale=${locale}&access_token=${this.token.identifier}`)
         }
 
         /**
@@ -1027,8 +989,7 @@ namespace Wow
         * @return Promise
         */
         getNews = (region: string, realm: string, guildName: string, locale: string): Promise<JSON | ApiException> => {
-            return HttpRequest.get(`https://${region}.api.blizzard.com/wow/guild/${realm}/${guildName}?
-                fields=news&locale=${locale}&access_token=${this.token.identifier}`)
+            return HttpRequest.get(`https://${region}.api.blizzard.com/wow/guild/${realm}/${guildName}?fields=news&locale=${locale}&access_token=${this.token.identifier}`)
         }
 
         /**
@@ -1042,8 +1003,7 @@ namespace Wow
         * @return Promise
         */
         getChallenge = (region: string, realm: string, guildName: string, locale: string): Promise<JSON | ApiException> => {
-            return HttpRequest.get(`https://${region}.api.blizzard.com/wow/guild/${realm}/${guildName}?
-                fields=challenge&locale=${locale}&access_token=${this.token.identifier}`)
+            return HttpRequest.get(`https://${region}.api.blizzard.com/wow/guild/${realm}/${guildName}?fields=challenge&locale=${locale}&access_token=${this.token.identifier}`)
         }
     }
 
@@ -1086,8 +1046,7 @@ namespace Wow
          * @return Promise
          */
         getItem = (region: string, itemId: number, locale: string): Promise<JSON | ApiException> => {
-            return HttpRequest.get(`https://${region}.api.blizzard.com/wow/item/${itemId}?
-                locale=${locale}&access_token=${this.token.identifier}`)
+            return HttpRequest.get(`https://${region}.api.blizzard.com/wow/item/${itemId}?locale=${locale}&access_token=${this.token.identifier}`)
         }
 
         /**
@@ -1100,8 +1059,7 @@ namespace Wow
          * @return Promise
          */
         getItemSet = (region: string, setId: number, locale: string): Promise<JSON | ApiException> => {
-            return HttpRequest.get(`https://${region}.api.blizzard.com/wow/set/${setId}?
-                locale=${locale}&access_token=${this.token.identifier}`)
+            return HttpRequest.get(`https://${region}.api.blizzard.com/wow/set/${setId}?locale=${locale}&access_token=${this.token.identifier}`)
         } 
     }
 
@@ -1230,8 +1188,7 @@ namespace Wow
          */
         getStats = (region: string, speciesID: string, level: number, breedId: number, 
             qualityId: number, locale: string): Promise<JSON | ApiException> => {
-            return HttpRequest.get(`https://${region}.api.blizzard.com/wow/pet/stats/${speciesID}?level=${level}&breedId=${breedId}&qualityId=${qualityId}&
-                locale=${locale}&access_token=${this.token.identifier}`)
+            return HttpRequest.get(`https://${region}.api.blizzard.com/wow/pet/stats/${speciesID}?level=${level}&breedId=${breedId}&qualityId=${qualityId}&locale=${locale}&access_token=${this.token.identifier}`)
         }
     }
 
@@ -1360,8 +1317,7 @@ namespace Wow
          * @return Promise 
          */
         getRecipe = (region: string, recipeId: string, locale: string): Promise<JSON | ApiException> => {
-            return HttpRequest.get(`https://${region}.api.blizzard.com/wow/recipe/${recipeId}?
-                locale=${locale}&access_token=${this.token.identifier}`)
+            return HttpRequest.get(`https://${region}.api.blizzard.com/wow/recipe/${recipeId}?locale=${locale}&access_token=${this.token.identifier}`)
         }
     
     }
@@ -1405,8 +1361,7 @@ namespace Wow
          * @return Promise
          */
         getSpell = (region: string, spellId: string, locale: string): Promise<JSON | ApiException> => {
-            return HttpRequest.get(`https://${region}.api.blizzard.com/wow/spell/${spellId}?
-                locale=${locale}&access_token=${this.token.identifier}`)
+            return HttpRequest.get(`https://${region}.api.blizzard.com/wow/spell/${spellId}?locale=${locale}&access_token=${this.token.identifier}`)
         }
     }
 
@@ -1547,8 +1502,7 @@ namespace Wow
          * @return Promise
          */
         getBattlegrounds = (region: string, locale: string): Promise<JSON | ApiException> => {
-            return HttpRequest.get(`https://${region}.api.blizzard.com/wow/data/battlegroups/?
-                locale=${locale}&access_token=${this.token.identifier}`)
+            return HttpRequest.get(`https://${region}.api.blizzard.com/wow/data/battlegroups/?locale=${locale}&access_token=${this.token.identifier}`)
         }
 
         
@@ -1561,8 +1515,7 @@ namespace Wow
          * @return Promise
          */
         getCharacterRaces = (region: string, locale: string): Promise<JSON | ApiException> => {
-            return HttpRequest.get(`https://${region}.api.blizzard.com/wow/data/character/races?
-                locale=${locale}&access_token=${this.token.identifier}`)
+            return HttpRequest.get(`https://${region}.api.blizzard.com/wow/data/character/races?locale=${locale}&access_token=${this.token.identifier}`)
         }
 
         /**
@@ -1574,8 +1527,7 @@ namespace Wow
          * @return Promise
          */
         getCharacterClasses = (region: string, locale: string): Promise<JSON | ApiException> => {
-            return HttpRequest.get(`https://${region}.api.blizzard.com/wow/data/character/classes?
-                locale=${locale}&access_token=${this.token.identifier}`)
+            return HttpRequest.get(`https://${region}.api.blizzard.com/wow/data/character/classes?locale=${locale}&access_token=${this.token.identifier}`)
         }
 
         /**
@@ -1587,8 +1539,7 @@ namespace Wow
          * @return Promise
          */
         getCharacterAchivements = (region: string, locale: string): Promise<JSON | ApiException> => {
-            return HttpRequest.get(`https://${region}.api.blizzard.com/wow/data/character/achievements?
-                locale=${locale}&access_token=${this.token.identifier}`)
+            return HttpRequest.get(`https://${region}.api.blizzard.com/wow/data/character/achievements?locale=${locale}&access_token=${this.token.identifier}`)
         }
 
         /**
@@ -1600,8 +1551,7 @@ namespace Wow
          * @return Promise
          */
         getGuildRewards = (region: string, locale: string): Promise<JSON | ApiException> => {
-            return HttpRequest.get(`https://${region}.api.blizzard.com/wow/data/guild/rewards?
-                locale=${locale}&access_token=${this.token.identifier}`)
+            return HttpRequest.get(`https://${region}.api.blizzard.com/wow/data/guild/rewards?locale=${locale}&access_token=${this.token.identifier}`)
         }
 
         /**
@@ -1613,8 +1563,7 @@ namespace Wow
          * @return Promise
          */
         getGuildPerks = (region: string, locale: string): Promise<JSON | ApiException> => {
-            return HttpRequest.get(`https://${region}.api.blizzard.com/wow/data/guild/perks?
-                locale=${locale}&access_token=${this.token.identifier}`)
+            return HttpRequest.get(`https://${region}.api.blizzard.com/wow/data/guild/perks?locale=${locale}&access_token=${this.token.identifier}`)
         }
 
         /**
@@ -1626,8 +1575,7 @@ namespace Wow
          * @return Promise
          */
         getGuildAchivements = (region: string, locale: string): Promise<JSON | ApiException> => {
-            return HttpRequest.get(`https://${region}.api.blizzard.com/wow/data/guild/achievements?
-                locale=${locale}&access_token=${this.token.identifier}`)
+            return HttpRequest.get(`https://${region}.api.blizzard.com/wow/data/guild/achievements?locale=${locale}&access_token=${this.token.identifier}`)
         }
 
         /**
@@ -1639,8 +1587,7 @@ namespace Wow
          * @return Promise
          */
         getItemClasses = (region: string, locale: string): Promise<JSON | ApiException> => {
-            return HttpRequest.get(`https://${region}.api.blizzard.com/wow/data/item/classes?
-                locale=${locale}&access_token=${this.token.identifier}`)
+            return HttpRequest.get(`https://${region}.api.blizzard.com/wow/data/item/classes?locale=${locale}&access_token=${this.token.identifier}`)
         }
 
         /**
@@ -1652,8 +1599,7 @@ namespace Wow
          * @return Promise
          */
         getTalents = (region: string, locale: string): Promise<JSON | ApiException> => {
-            return HttpRequest.get(`https://${region}.api.blizzard.com/wow/data/talents?
-                locale=${locale}&access_token=${this.token.identifier}`)
+            return HttpRequest.get(`https://${region}.api.blizzard.com/wow/data/talents?locale=${locale}&access_token=${this.token.identifier}`)
         }
 
         /**
@@ -1665,10 +1611,7 @@ namespace Wow
          * @return Promise
          */
         getPetTypes = (region: string, locale: string): Promise<JSON | ApiException> => {
-            return HttpRequest.get(`https://${region}.api.blizzard.com/wow/data/pet/types?
-                locale=${locale}&access_token=${this.token.identifier}`)
+            return HttpRequest.get(`https://${region}.api.blizzard.com/wow/data/pet/types?locale=${locale}&access_token=${this.token.identifier}`)
         }
     }
 }
-
-export = Wow
