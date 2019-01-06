@@ -61,8 +61,7 @@ export namespace Diablo3
          * @return Promise
          */
         getApiHero = (region: string, bnet: string, heroId: string, locale: string): Promise<JSON | ApiException> => {
-            return HttpRequest.get(`https://${region}.api.blizzard.com/d3/profile/${bnet}/hero/${heroId}
-                ?locale=${locale}&access_token=${this.token.identifier}`)
+            return HttpRequest.get(`https://${region}.api.blizzard.com/d3/profile/${bnet}/hero/${heroId}?locale=${locale}&access_token=${this.token.identifier}`)
         }
 
         /**
