@@ -1,17 +1,53 @@
 import * as request from 'request-promise'
+import { isUndefined } from 'util';
 
 /**
  * Isolated interface only exclusive
  * for this API class
  */
-export interface IBearerToken
-{
+export interface IBearerToken {
     identifier: string,
     type: string,
     expires_in: number,
     scope?: string
 }
 
+/**
+ * Available regions
+ */
+export enum Region {
+    Europe = 'eu',
+    UnitedStates = 'us',
+    Korea = 'kr',
+    Taiwan = 'tw',
+    China = 'cn'
+}
+
+/**
+ * Available locales
+ */
+export enum Locale {
+    American = "en_US",
+    Mexican = "es_MX",
+    Brazilian = "pt_BR",
+    British = "en_GB",
+    Spanish = "es_ES",
+    French = "fr_FR",
+    Russian = "ru_RU",
+    Germany = "de_DE",
+    Portuguese = "pt_PT",
+    Italian = "it_IT",
+    Korean = "ko_KR",
+    Taiwan = "zh_TW",
+    Chinese = "zh_CN" 
+}
+
+/**
+ * Callback when creating a new API object to be provided
+ */
+export interface IResultFunction {
+    (error: any, bearerToken: IBearerToken | null) : void
+}
 
 /**
  * Implements all the requests interfaces in order to proceed
@@ -26,15 +62,15 @@ export class API
     private hasToken: boolean = false
 
     //API Language 
-    private region: string
-    private locale: string 
+    private region: Region
+    private locale: Locale 
 
     //API workaround data
     private client_id: string
     private client_secret: string
     private authToken?: IBearerToken
 
-    private callbackOnConnect: Function
+    private callbackOnConnect: IResultFunction
 
     /**
      * Initializes our api with the given credentials
@@ -43,9 +79,9 @@ export class API
      * @param region    default europe
      * @param locale    default eu_GB
      */
-    constructor(clientId: string, clientSecret: string, callbackOnConnect: Function, region?: string, locale?: string) {
-        this.region = typeof region != 'undefined' ? region : "eu"
-        this.locale = typeof locale != 'undefined' ? locale : "en_GB"
+    constructor(clientId: string, clientSecret: string, callbackOnConnect: IResultFunction, region?: Region, locale?: Locale) {
+        this.region = region || Region.Europe
+        this.locale = locale || Locale.British
         this.client_id = clientId
         this.client_secret = clientSecret
         this.callbackOnConnect = callbackOnConnect
@@ -101,11 +137,10 @@ export class API
                     scope: body.scope
                 }
                 this.hasToken = true
-                this.callbackOnConnect(true, this.authToken)
+                this.callbackOnConnect(null, this.authToken)
             })
             .catch(err => {
-                console.log(err)
-                //filter error and throw exception according to it
+                this.callbackOnConnect(err, null)
             })
     }
 

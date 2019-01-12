@@ -4,8 +4,7 @@ import {ApiException} from './exceptions'
 /**
  * Interface for request data as cache
  */
-interface LastRequest
-{
+interface LastRequest {
     data: JSON,
     url: string,
     headers: JSON,
@@ -34,9 +33,11 @@ export class HttpRequest
                 url === HttpRequest._last.url)
                 resolve(HttpRequest._last.data)
             
+                console.log("GET REQ = " + url)
             //Perform the request
             request.get(url, {resolveWithFullResponse: true})
                 .then( res => {
+                    console.log(res)
                     HttpRequest._last = {
                         data: res.body,
                         url: url,
@@ -44,10 +45,16 @@ export class HttpRequest
                         statusCode: 200, //test
                         date: Date.now()
                     }
+                    console.log(res.body)
                     resolve(res.body)
                 })
                 .catch( e => {
-                    reject(e.error)
+                    console.log(e)
+                    reject({
+                        code: e.statusCode,
+                        type: e.name,
+                        message: e.body
+                    })
                 })
         })
     }        

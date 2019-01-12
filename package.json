@@ -16,11 +16,19 @@
     "@types/request": "^2.48.1",
     "@types/request-promise": "^4.1.42",
     "request": "^2.88.0",
-    "request-promise": "^4.2.2",
-    "typescript": "next"
+    "request-promise": "^4.2.2"
   },
-  "devDependencies": {},
+  "devDependencies": {
+    "@types/dotenv": "^6.1.0",
+    "@types/mocha": "^5.2.5",
+    "chai": "^4.2.0",
+    "dotenv": "^6.2.0",
+    "mocha": "^5.2.0",
+    "ts-node": "^7.0.1",
+    "typescript": "^3.3.0-dev.20190112"
+  },
   "scripts": {
+    "test": "mocha --require ts-node/register src/tests/**/*.ts",
     "build": "tsc",
     "deploy": "npm run build && npm version patch && npm publish",
     "compile": "tsc && node lib/index.js",
