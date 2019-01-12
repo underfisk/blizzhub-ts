@@ -14,7 +14,7 @@ To initialize our api we simply do:
 import { API, IBearerToken } from 'blizzhub/lib/api'
 import {Wow} from 'blizzhub/lib'
 import {Diablo3} from 'blizzhub/lib'
-const api = new API('client_id', 'client_secret', (status, token) => {
+const api = new API('client_id', 'client_secret', (error, token) => {
     //Here inside you do whatever you want with the token like this
     const const conRealms = new Wow.ConnectedRealm();
     conRealms.getConnectedRealmIndex('us', 'dynamic-us', 'en_US')
